@@ -3,8 +3,8 @@ Contributors: hornero, carazo
 Donate link: http://codection.com
 Tags: form, login, registration, editor, lost password, responsive, wpml, internationalization, languages, role, CAPTCHA, honeypot, shortcode, wordpress, frontend
 Requires at least: 3.4
-Tested up to: 4.7
-Stable tag: 1.8.1
+Tested up to: 4.9
+Stable tag: 1.8.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,8 +51,6 @@ Responsive Frontend Login and Registration plugin. A plugin for displaying login
 *   Auto linked forms, if you place a shortcode in a page/post the link between them will be automatically generated
 *   And yes, this is WordPress 4.6 ready! Also compatible with WooCommerce.
 
-You could test it here [cleanlogin.codection.com](http://cleanlogin.codection.com/). Enjoy!
-
 == Usage and Settings ==
 
 Please, refer to [Installation section](https://wordpress.org/plugins/clean-login/installation/)
@@ -73,6 +71,10 @@ Please, refer to [Installation section](https://wordpress.org/plugins/clean-logi
 12. WPML. Certificate of Compatibility
 
 == Changelog ==
+
+= 1.8.2 =
+*   Password generation bug solved. Thanks to fouad.z (@fouadz)
+*   Tested on 4.9
 
 = 1.8.1 =
 *   $_POST sanitizing bug solved. Thanks to tomykas (@tomykas)

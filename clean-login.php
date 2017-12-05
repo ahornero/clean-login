@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Clean_Login
- * @version 1.8.1
+ * @version 1.8.2
  */
 /*
 Plugin Name: Clean Login
 Plugin URI: http://cleanlogin.codection.com
 Description: Responsive Frontend Login and Registration plugin. A plugin for displaying login, register, editor and restore password forms through shortcodes. [clean-login] [clean-login-edit] [clean-login-register] [clean-login-restore]
 Author: codection
-Version: 1.8.1
+Version: 1.8.2
 Author URI: https://codection.com
 Text Domain: clean-login
 Domain Path: /lang
@@ -570,9 +570,9 @@ function clean_login_load_before_headers() {
 					$user_id = wp_update_user( array( 'ID' => $user_id, 'user_pass' => $new_password ) );
 
 					if ( is_wp_error( $user_id ) ) {
-						$url = esc_url( add_query_arg( 'sent', 'wronguser', $url ) );
+						$url = esc_u 'sent', 'wronguser', $url ) );
 					} else {
-						$url = esc_url( add_query_arg( 'pass', $new_password, $url ) );
+						$url = esc_url( add_query_arg( 'pass', urlencode($new_password), $url ) );
 					}
 				}
 
