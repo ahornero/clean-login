@@ -570,7 +570,7 @@ function clean_login_load_before_headers() {
 					$user_id = wp_update_user( array( 'ID' => $user_id, 'user_pass' => $new_password ) );
 
 					if ( is_wp_error( $user_id ) ) {
-						$url = esc_u 'sent', 'wronguser', $url ) );
+						$url = esc_url( add_query_arg( 'sent', 'wronguser', $url ) );
 					} else {
 						$url = esc_url( add_query_arg( 'pass', urlencode($new_password), $url ) );
 					}
