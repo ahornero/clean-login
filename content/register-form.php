@@ -28,29 +28,34 @@
 				<label for='website'>Website</label>
 				<input type='text' name='website' value=".">
 			</div>
-			
+
 			<div class="cleanlogin-field">
 				<input class="cleanlogin-field-password" type="password" name="pass1" value="" autocomplete="off" placeholder="<?php echo __( 'New password', 'clean-login' ); ?>">
 			</div>
-			
+
 			<?php /*check if single password is checked */ if ( get_option( 'cl_single_password' ) != 'on' ) : ?>
 				<div class="cleanlogin-field">
 					<input class="cleanlogin-field-password" type="password" name="pass2" value="" autocomplete="off" placeholder="<?php echo __( 'Confirm password', 'clean-login' ); ?>">
 				</div>
 			<?php endif; ?>
 
-			<?php /*check if captcha is checked */ if ( get_option( 'cl_antispam' ) == 'on' ) : ?>
+			<?php /*check if captcha is checked */ if ( get_option( 'cl_antispam' ) == 'on') : ?>
 				<div class="cleanlogin-field">
 					<img src="<?php echo plugins_url( 'captcha', __FILE__ ); ?>"/>
 					<input class="cleanlogin-field-spam" type="text" name="captcha" value="" autocomplete="off" placeholder="<?php echo __( 'Type the text above', 'clean-login' ); ?>">
 				</div>
 			<?php endif; ?>
-
+			<?php /*check if captcha is checked */ if ( get_option( 'cl_gcaptcha' ) == 'on') : ?>
+				<?php gcaptcha_script(); ?>
+				<div class="cleanlogin-field">
+					<div class="g-recaptcha" data-sitekey="<?php echo get_option( 'cl_gcaptcha_sitekey' ) ?>"></div>
+				</div>
+			<?php endif; ?>
 			<?php /*check if custom roles is checked */ if ( get_option( 'cl_chooserole' ) == 'on' ) : ?>
 				<?php if ($param['role']) : ?>
 				<input type="text" name="role" value="<?php echo $param['role']; ?>" hidden >
-				<?php else : ?> 
-				<div class="cleanlogin-field cleanlogin-field-role" <?php if ( get_option( 'cl_antispam' ) == 'on' ) echo 'style="margin-top: 46px;"'; ?> >
+				<?php else : ?>
+				<div class="cleanlogin-field cleanlogin-field-role" <?php if ( get_option( 'cl_antispam' ) == 'on' || get_option( 'cl_gcaptcha' ) == 'on' ) echo 'style="margin-top: 46px;"'; ?> >
 					<span><?php echo __( 'Choose your role:', 'clean-login' ); ?></span>
 					<select name="role" id="role">
 						<?php
@@ -76,9 +81,9 @@
 
 		</fieldset>
 
-		<div>	
-			<input type="submit" value="<?php echo __( 'Register', 'clean-login' ); ?>" name="submit" onclick="this.form.submit(); this.disabled = true;">
-			<input type="hidden" name="action" value="register">		
+		<div>
+			<input type="submit" value="<?php echo __( 'Register', 'clean-login' ); ?>" name="btn-submit" onclick="this.form.submit(); this.disabled = true;">
+			<input type="hidden" name="action" value="register">
 		</div>
 
 	</form>
