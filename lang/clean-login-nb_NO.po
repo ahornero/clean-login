@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Clean Login\n"
-"POT-Creation-Date: 2014-08-28 18:20+0100\n"
-"PO-Revision-Date: 2017-03-02 15:56+0000\n"
-"Last-Translator: Pablo Margareto <pablomargareto@gmail.com>\n"
+"POT-Creation-Date: 2017-12-13 08:25+0000\n"
+"PO-Revision-Date: 2017-12-13 08:36+0000\n"
+"Last-Translator: ms <pablomargareto@gmail.com>\n"
 "Language-Team: Norwegian (Bokmål)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,110 +19,343 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "Plural-Forms: nplurals=2; plural=n != 1"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:37
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:37
+#: clean-login.php:48
+msgid "Something went wrong while activating your user"
+msgstr "Noe gikk galt mens du aktiverte brukeren"
+
+#: clean-login.php:50
+msgid "Your account is currently disabled"
+msgstr "Kontoen din er for øyeblikket deaktivert"
+
+#: clean-login.php:52
+msgid "Successfully activated"
+msgstr "Vellykket aktivert"
+
+#: clean-login.php:82 clean-login.php:127 clean-login.php:993
+msgid ""
+"Passwords must be eight characters including one upper/lowercase letter, one "
+"special/symbol character and alphanumeric characters. Passwords should not "
+"contain the user's username, email, or first/last name."
+msgstr ""
+"Passord må være åtte tegn, inkludert ett øvre/små bokstav, ett "
+"spesielt/symbolskarakter og alfanumeriske tegn. Passord må ikke inneholde "
+"brukerens brukernavn, e-post eller første/etternavn."
+
+#: clean-login.php:123
+msgid "Please confirm your account, you will receive an email"
+msgstr "Vennligst bekreft kontoen din, du vil motta en e-post"
+
+#: clean-login.php:131
+msgid "First name is not valid"
+msgstr "Fornavn er ikke gyldig"
+
+#: clean-login.php:133
+msgid "Last name is not valid"
+msgstr "Etternavn er ikke gyldig"
+
+#: clean-login.php:143
+msgid "must be checked"
+msgstr "må kontrolleres"
+
+#: clean-login.php:455
+#, php-format
+msgid ""
+"Use the following link to activate your account: <a href='%s'>activate your "
+"account</a>.<br/><br/>%s<br/>"
+msgstr ""
+"Bruk følgende link for å aktivere kontoen din: <a href='%s'>aktiver kontoen "
+"din</a>.<br/><br/>%s<br/>"
+
+#: clean-login.php:457
+msgid "Activate your account"
+msgstr ""
+"Aktiver kontoen din\n"
+
+#: clean-login.php:488
+msgid "New user"
+msgstr "Ny bruker"
+
+#: clean-login.php:570
+msgid "Restore your password"
+msgstr "Gjenopprett passordet ditt"
+
+#: clean-login.php:756
+msgid "Donate"
+msgstr "Donere"
+
+#: clean-login.php:798
+msgid "Do you like it?"
+msgstr ""
+"Liker du det?\n"
+
+#: clean-login.php:813
+msgid "Clean Login status"
+msgstr "Clean Login status"
+
+#: clean-login.php:859
+msgid "Options"
+msgstr "Alternativer"
+
+#: clean-login.php:956
+msgid "Enable Google reCaptcha?"
+msgstr "Aktiver Google reCaptcha?"
+
+#: clean-login.php:957
+msgid "Google reCaptcha site key and secret key must not be empty"
+msgstr "Google reCaptcha site key og secret key må ikke være tom"
+
+#: clean-login.php:959
+msgid "Google reCaptcha Site Key"
+msgstr "Google reCaptcha Site Key"
+
+#: clean-login.php:963
+msgid "Google reCaptcha Secret Key"
+msgstr "Google reCaptcha Secret Key"
+
+#: clean-login.php:969
+msgid "User role"
+msgstr "Brukerrolle"
+
+#: clean-login.php:974
+msgid "Choose the role(s) in the registration form?"
+msgstr "Velg rolle(r) i registreringsskjemaet?"
+
+#: clean-login.php:975
+msgid ""
+"This feature allows you to choose the role from the frontend, with the "
+"selected roles you want to show. You can also define an standard predefined "
+"role through a shortcode parameter, e.g. [clean-login-register "
+"role=\"contributor\"]. Anyway, you need to choose only the role(s) you want "
+"to accept to avoid security/infiltration issues."
+msgstr ""
+"Denne funksjonen lar deg velge rollen fra frontend, med de valgte rollene du "
+"vil vise. Du kan også definere en standard forhåndsdefinert rolle gjennom en "
+"kortkodeparameter, f.eks. [ren-login-register role=\"contributor\"]. Uansett "
+"må du bare velge hvilken rolle / roller du vil akseptere for å unngå "
+"sikkerhets / infiltreringsproblemer."
+
+#: clean-login.php:990
+msgid "Password complexity"
+msgstr "Passord kompleksitet"
+
+#: clean-login.php:992
+msgid "Enable password complexity?"
+msgstr "Aktiver passordkompleksitet?"
+
+#: clean-login.php:997
+msgid "Email notification"
+msgstr "E-postvarsling"
+
+#: clean-login.php:999
+msgid "Enable email notification for new registered users?"
+msgstr "Aktiver e-postvarsling for nye registrerte brukere?"
+
+#: clean-login.php:1000
+msgid "Please use HMTL tags for all formatting. And also you can use:"
+msgstr "Vennligst bruk HTML-koder for all formatering. Og også du kan bruke:"
+
+#: clean-login.php:1004
+msgid "Terms and conditions"
+msgstr ""
+"Vilkår og betingelser\n"
+
+#: clean-login.php:1006
+msgid "Accept terms / conditions in the registration form?"
+msgstr "Godta vilkår / betingelser i registreringsskjemaet?"
+
+#: clean-login.php:1007
+msgid "Terms and conditions message"
+msgstr "Vilkår og betingelser melding"
+
+#: clean-login.php:1008
+msgid "Target URL"
+msgstr "Target URL"
+
+#: clean-login.php:1012
+msgid "Use Email as Username"
+msgstr "Bruk e-post som brukernavn"
+
+#: clean-login.php:1014
+msgid ""
+"Allow user to use email as username? If you want to use both, WP Email Login "
+"plugin will help you"
+msgstr ""
+"Tillat brukeren å bruke e-post som brukernavn? Hvis du vil bruke begge, vil "
+"WP Email Login plugin hjelpe deg"
+
+#: clean-login.php:1018
+msgid "Single Password"
+msgstr "Enkelt passord"
+
+#: clean-login.php:1020
+msgid "Only ask for password once on registration form?"
+msgstr "Bare spør om passord en gang på registreringsskjemaet?"
+
+#: clean-login.php:1024
+msgid "Registration"
+msgstr "Registrering"
+
+#: clean-login.php:1026
+msgid "Automatically Login after registration?"
+msgstr "Automatisk pålogging etter registrering?"
+
+#: clean-login.php:1028
+msgid "URL after registration (if blank then homepage)"
+msgstr "URL etter registrering (hvis blank deretter hjemmeside)"
+
+#: clean-login.php:1032
+msgid "Add name and surname?"
+msgstr "Legg til navn og etternavn?"
+
+#: clean-login.php:1034
+msgid "Validate user registration through an email?"
+msgstr "Bekreft brukerregistrering via e-post?"
+
+#: clean-login.php:1035
+msgid "This feature cannot be used with the automatic login after registration"
+msgstr ""
+"Denne funksjonen kan ikke brukes med automatisk pålogging etter registrering"
+
+#: clean-login.php:1039
+msgid "Redirections"
+msgstr "Omdirigeringer"
+
+#: clean-login.php:1041
+msgid "Redirect after log in?"
+msgstr "Viderekobling etter logg inn?"
+
+#: clean-login.php:1043
+msgid "URL after login (if blank then homepage)"
+msgstr "URL etter log inn (hvis blank da startside)"
+
+#: clean-login.php:1047
+msgid "Redirect after log out?"
+msgstr "Viderekobling etter logg ut?"
+
+#: clean-login.php:1049
+msgid "URL after logout (if blank then homepage)"
+msgstr "URL etter utlogging (hvis blank da startside)"
+
+#: clean-login.php:1259
+msgid "Logout"
+msgstr "Logg ut"
+
+#: clean-login.php:1310
+msgid "Settings"
+msgstr "Instillinger"
+
+#: content/register-form.php:59
+msgid "Choose your role:"
+msgstr "Velg din rolle:"
+
+#. Name of the plugin
+msgid "Clean Login"
+msgstr "Clean Login"
+
+#. Description of the plugin
+msgid ""
+"Responsive Frontend Login and Registration plugin. A plugin for displaying "
+"login, register, editor and restore password forms through shortcodes. "
+"[clean-login] [clean-login-edit] [clean-login-register] [clean-login-restore]"
+msgstr ""
+"Responsive Frontend Login og Registration plugin. Et plugin for visning av "
+"pålogging, registrering, rediger og gjenopprett passord skjemaer via "
+"kortkoder. [ren-login] [clean-login-edit] [ren-login-register] [ren-login-"
+"restore]"
+
+#. URI of the plugin
+msgid "http://cleanlogin.codection.com"
+msgstr "http://cleanlogin.codection.com"
+
+#. Author of the plugin
+msgid "codection"
+msgstr "codection"
+
+#. Author URI of the plugin
+msgid "https://codection.com"
+msgstr "https://codection.com"
+
+#: clean-login.php:42
 msgid "Successfully logged in!"
 msgstr "Du er logget inn!"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:39
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:39
+#: clean-login.php:44
 msgid "Wrong credentials"
 msgstr "Ukorrekte opplysninger"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:41
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:41
+#: clean-login.php:46
 msgid "Successfully logged out!"
 msgstr "Du er logget ut!"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:69
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:69
+#: clean-login.php:80
 msgid "Information updated"
 msgstr "Opplysninger oppdatert"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:71
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:71
+#: clean-login.php:84
 msgid "Passwords must be identical"
 msgstr "Passordene må være like"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:73
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:73
+#: clean-login.php:86
 msgid "Error updating email"
 msgstr "Feil ved oppdatering av e-mail"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:75
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:75
+#: clean-login.php:88
 msgid "Something strange has ocurred"
 msgstr "Et problem har oppstått, prøv igjen"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:81
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:81
+#: clean-login.php:94
 msgid "You need to be logged in to edit your profile"
 msgstr "Du må være logget inn for å redigere din profil"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:104
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:104
+#: clean-login.php:121 clean-login.php:123
 msgid "User created"
 msgstr "Bruker opprettet"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:106
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:106
+#: clean-login.php:125
 msgid "New user created"
 msgstr "Ny bruker opprettet"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:108
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:151
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:108
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:151
+#: clean-login.php:129 clean-login.php:178
 msgid "Username is not valid"
 msgstr "Ugyldig brukernavn/e-post, skriv inn e-post på nytt"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:110
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:110
+#: clean-login.php:135
 msgid "Passwords must be identical and filled"
 msgstr "Passordene må være like i begge feltene"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:112
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:112
+#: clean-login.php:137
 msgid "Email is not valid"
 msgstr "Ugyldig e-mail adresse"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:114
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:114
+#: clean-login.php:139
 msgid "CAPTCHA is not valid, please try again"
 msgstr "CAPTCHA er ikke godkjent, prøv igjen"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:116
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:116
+#: clean-login.php:141
 msgid "Something strange has ocurred while created the new user"
 msgstr "Feil i opprettelsen av ny bruker"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:122
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:122
+#: clean-login.php:149
 msgid "You are now logged in. It makes no sense to register a new user"
 msgstr "Du er allerede logget inn"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:145
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:145
+#: clean-login.php:172
 msgid "You will receive an email with the activation link"
 msgstr "Du vil få en e-mail med link for aktivering"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:147
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:147
+#: clean-login.php:174
 msgid "You may receive an email with the activation link"
 msgstr "Du vil muligens få en e-mail med aktiveringslink"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:149
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:149
+#: clean-login.php:176
 msgid "An error has ocurred sending the email"
 msgstr "Feil oppstod ved sending av e-mail"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:162
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:162
+#: clean-login.php:187
 msgid "You are now logged in. It makes no sense to restore your account"
 msgstr "Du er allerede logget inn"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:294
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:294
+#: clean-login.php:484
 #, php-format
 msgid ""
 "New user registered: %s <br/><br/>Please change the role from 'Stand By' to "
@@ -131,14 +364,12 @@ msgstr ""
 "Ny bruker funnet: %s <br/><br/>Vennligst korriger adgangskriterier fra "
 "'Stand By' til 'Abonnent' eller høyere for å gi' full adgang til websiden."
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:296
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:296
+#: clean-login.php:486
 #, php-format
 msgid "New user registered: %s <br/>"
 msgstr "Ny bruker registrert: %s <br/>"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:338
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:338
+#: clean-login.php:568
 #, php-format
 msgid ""
 "Use the following link to restore your password: <a href='%s'>restore your "
@@ -147,13 +378,11 @@ msgstr ""
 "Trykk på linken for å lage nytt passord: <a href='%s'>Glemt passord</a> <br/>"
 "<br/>%s<br/>"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:547
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:547
+#: clean-login.php:785
 msgid "Admin area"
 msgstr "Administrator område"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:560
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:560
+#: clean-login.php:815
 msgid ""
 "Below you can check the plugin status regarding the shortcodes usage and the "
 "pages/posts which contain  it."
@@ -161,37 +390,23 @@ msgstr ""
 "Nedenfor kan du kontrollere plugin status på bruk av shortcode og hvilke "
 "sider/innlegg disse er brukt på."
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:568
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:577
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:586
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:595
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:568
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:577
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:586
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:595
+#: clean-login.php:823 clean-login.php:832 clean-login.php:841
+#: clean-login.php:850
 msgid "Currently not used"
 msgstr "Ikke i bruk p.t."
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:570
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:579
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:588
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:597
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:570
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:579
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:588
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:597
+#: clean-login.php:825 clean-login.php:834 clean-login.php:843
+#: clean-login.php:852
 #, php-format
 msgid "Used <a href=\"%s\">here</a>"
 msgstr "Brukt <a href=\"%s\">her</a>"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:572
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:572
+#: clean-login.php:827
 msgid "This shortcode contains login form and login information."
 msgstr ""
 "Denne 'shortcode' inneholder innloggingsskjemaer og innloggingsinformasjon."
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:581
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:581
+#: clean-login.php:836
 msgid ""
 "This shortcode contains the profile editor. If you include in a page/post a "
 "link will appear on your login preview."
@@ -199,8 +414,7 @@ msgstr ""
 "Denne 'shortcode' inneholder bruker-info vinduet. Hvis den brukesen på en "
 "side eller post/innlegg vil det vises en link i forhåndsvisningen."
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:590
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:590
+#: clean-login.php:845
 msgid ""
 "This shortcode contains the register form. If you include in a page/post a "
 "link will appear on your login form."
@@ -208,8 +422,7 @@ msgstr ""
 "Denne 'shortcode' inneholder registreringsskjemaet. Når den legges til på en "
 "side/innlegg/post kommer det en link i registreringsskjemaet."
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:599
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:599
+#: clean-login.php:854
 msgid ""
 "This shortcode contains the restore (lost password?) form. If you include in "
 "a page/post a link will appear on your login form."
@@ -218,33 +431,27 @@ msgstr ""
 "legges til på en side/innlegg/post vil det vises en link i "
 "registreringsskjemaet."
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:620
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:620
+#: clean-login.php:897
 msgid "Settings saved."
 msgstr "Innstillinger lagret."
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:635
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:635
+#: clean-login.php:933
 msgid "Admin bar"
 msgstr "Administrator verktøylinje"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:637
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:637
+#: clean-login.php:935
 msgid "Hide admin bar for non-admin users?"
 msgstr "Skjul administrator verktøylinjen for alle andre enn administrator?"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:641
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:641
+#: clean-login.php:939
 msgid "Dashboard access"
 msgstr "Skrivebordstilgang"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:643
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:643
+#: clean-login.php:941
 msgid "Disable dashboard access for non-admin users?"
 msgstr "Ikke tillat adgang til kontrollpanel for andre enn administratorer?"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:644
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:644
+#: clean-login.php:942
 msgid ""
 "Please note that you can only log in through <strong>wp-login.php</strong> "
 "and this plugin. <strong>wp-admin</strong> permalink will be inaccessible."
@@ -252,23 +459,19 @@ msgstr ""
 "Du kan kun logge inn gjennom <strong>wp-login.php</strong> og denne plugin. "
 "<strong>wp-admin</strong> Permalinks vil ikke kunne brukes."
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:648
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:648
+#: clean-login.php:946 clean-login.php:954
 msgid "Antispam protection"
 msgstr "Spambeskyttelse"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:650
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:650
+#: clean-login.php:948
 msgid "Enable captcha?"
 msgstr "Bruk captacha?"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:651
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:651
+#: clean-login.php:949
 msgid "Honeypot antispam detection is enabled by default."
 msgstr "Honeypot antispam er installert som standard"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:652
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:652
+#: clean-login.php:950
 msgid ""
 "For captcha usage the PHP-GD library needs to be enabled in your "
 "server/hosting."
@@ -276,18 +479,11 @@ msgstr ""
 "For at captcha skal virke må PHP-GD biblioteket være aktivt på din "
 "server/webhotel."
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:656
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:656
-msgid "User Standby role"
-msgstr "Bruker standby rolle"
-
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:658
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:658
+#: clean-login.php:971
 msgid "Enable Standby role?"
 msgstr "Aktiver rollen 'Standby'?"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:659
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:659
+#: clean-login.php:972
 msgid ""
 "Standby role disables all the capabilities for new users, until the "
 "administrator changes. It usefull for site with restricted components."
@@ -295,103 +491,103 @@ msgstr ""
 "Standby rollen sørger for at nye brukere ikke har noen rettigheder før de er "
 "godkjendt av administrator. Nyttigt for websteder med beskyttet innhold."
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:663
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:663
+#: clean-login.php:983
 msgid "Hide username"
 msgstr "Skjul brukernavn"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:665
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:665
+#: clean-login.php:985
 msgid "Hide username?"
 msgstr "Skjul brukernavn?"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:666
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:666
+#: clean-login.php:986
 msgid "Hide username from the preview form."
 msgstr "Skjul brukernavnet etter innlogging."
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:675
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:675
+#: clean-login.php:1059
 msgid "Save Changes"
 msgstr "Lagre endringer"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:702
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:702
+#: clean-login.php:1226
 msgid "Use this widget to show the user login status and Clean Login links."
 msgstr "Bruk denne widget til å vise innlogingsstatus og Clean Login links."
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:730
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-preview.php:13
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:730
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-preview.php:13
+#: clean-login.php:1256 content/login-preview.php:15
 msgid "Edit my profile"
 msgstr "Rediger min profil"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:734
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-form.php:20
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/restore-new.php:15
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:734
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-form.php:20
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/restore-new.php:15
+#: clean-login.php:1265 content/restore-new.php:21 content/login-form.php:22
 msgid "Log in"
 msgstr "Logg inn"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:735
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-form.php:36
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/register-form.php:38
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:735
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-form.php:36
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/register-form.php:38
+#: clean-login.php:1266 content/register-form.php:85 content/login-form.php:40
 msgid "Register"
 msgstr "Registrer"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:736
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-form.php:32
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:736
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-form.php:32
+#: clean-login.php:1267 content/login-form.php:36
 msgid "Lost password?"
 msgstr "Glemt passord?"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:749
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:749
+#: clean-login.php:1280
 msgid "User login status"
 msgstr "Innloggingsstatus bruker"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/clean-login.php:753
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/clean-login.php:753
+#: clean-login.php:1284
 msgid "Title:"
 msgstr "Tittel:"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-edit.php:9
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-edit.php:9
-msgid "General information"
-msgstr "Generell informasjon"
+#: content/restore-new.php:12
+msgid "Your new password is"
+msgstr "Ditt nye passord er"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-edit.php:14
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-edit.php:14
+#: content/restore-form.php:11
+msgid "Username (or E-mail)"
+msgstr "E-mail eller brukernavn"
+
+#: content/restore-form.php:22
+msgid "Restore password"
+msgstr "Gjenopprett passord"
+
+#: content/register-form.php:10 content/login-edit.php:14
 msgid "First name"
 msgstr "Fornavn"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-edit.php:19
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-edit.php:19
+#: content/register-form.php:13 content/login-edit.php:19
 msgid "Last name"
 msgstr "Etternavn"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-edit.php:24
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/register-form.php:11
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-edit.php:24
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/register-form.php:11
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/restore-form.php:7
+#: content/register-form.php:19 content/login-form.php:13
+msgid "Username"
+msgstr "Brukernavn"
+
+#: content/register-form.php:24 content/login-edit.php:24
 msgid "E-mail"
 msgstr "E-mail"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-edit.php:30
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-edit.php:30
+#: content/register-form.php:33 content/login-edit.php:37
+msgid "New password"
+msgstr "Nytt passord"
+
+#: content/register-form.php:38 content/login-edit.php:42
+msgid "Confirm password"
+msgstr "Bekreft passord"
+
+#: content/register-form.php:45
+msgid "Type the text above"
+msgstr "Skriv teksten over"
+
+#: content/login-preview.php:13
+msgid "Log out"
+msgstr "Logg ut"
+
+#: content/login-edit.php:9
+msgid "General information"
+msgstr "Generell informasjon"
+
+#: content/login-edit.php:30
 msgid "Change password"
 msgstr "Endre passord"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-edit.php:32
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-edit.php:32
+#: content/login-edit.php:32
 msgid ""
 "If you would like to change the password type a new one. Otherwise leave "
 "this blank."
@@ -399,63 +595,14 @@ msgstr ""
 "Endre passord? - Skriv inn nytt passord her. La feltet være blankt om du "
 "ikke ønsker bytte passord."
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-edit.php:37
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/register-form.php:20
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-edit.php:37
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/register-form.php:20
-msgid "New password"
-msgstr "Nytt passord"
-
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-edit.php:42
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/register-form.php:24
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-edit.php:42
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/register-form.php:24
-msgid "Confirm password"
-msgstr "Bekreft passord"
-
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-edit.php:49
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-edit.php:49
+#: content/login-edit.php:49
 msgid "Update profile"
 msgstr "Oppdater profil"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-form.php:11
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/register-form.php:7
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-form.php:11
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/register-form.php:7
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/restore-form.php:7
-msgid "Username"
-msgstr "Brukernavn"
-
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-form.php:15
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-form.php:15
+#: content/login-form.php:17
 msgid "Password"
 msgstr "Passord"
 
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-form.php:25
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-form.php:25
+#: content/login-form.php:27
 msgid "Remember?"
 msgstr "Husk meg?"
-
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/login-preview.php:11
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/login-preview.php:11
-msgid "Log out"
-msgstr "Logg ut"
-
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/register-form.php:30
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/register-form.php:30
-msgid "Type the text above"
-msgstr "Skriv teksten over"
-
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/restore-form.php:7
-msgid "Username (or E-mail)"
-msgstr "E-mail eller brukernavn"
-
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/restore-form.php:18
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/restore-form.php:18
-msgid "Restore password"
-msgstr "Gjenopprett passord"
-
-#: Users/ahornero/Documents/wordpress.org/clean-login/trunk/content/restore-new.php:6
-#: Users/ahornero/www/wordpress/wp-content/plugins/clean-login/content/restore-new.php:6
-msgid "Your new password is"
-msgstr "Ditt nye passord er"
