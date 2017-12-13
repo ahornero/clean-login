@@ -228,19 +228,23 @@ function clean_login_is_password_complex($candidate) {
  */
 function valid_gcaptcha() {
   // gcaptcha field sent within the form
-  $gcaptcha = isset( $_POST['g-recaptcha-response'] ) ? sanitize_text_field( $_POST['g-recaptcha-response'] ) : '';
+  $gcaptcha_par = isset( $_POST['g-recaptcha-response'] ) ? sanitize_text_field( $_POST['g-recaptcha-response'] ) : '';
   // IP doing the request
   $remote_ip = $_SERVER["REMOTE_ADDR"];
   // secret key gcaptcha
   $secret_key_gcaptcha = get_option( 'cl_gcaptcha_secretkey' );
-  // make a GET request to the Google reCAPTCHA Server
-  $request_gcaptcha = wp_remote_get(
-    'https://www.google.com/recaptcha/api/siteverify?secret=' . $secret_key_gcaptcha . '&response=' . $gcaptcha . '&remoteip=' . $remote_ip
-  );
-  // get the request response body
-  $response_body_gcaptcha = wp_remote_retrieve_body( $request_gcaptcha );
-  $result_gcaptcha = json_decode( $response_body_gcaptcha, true );
-  return $result_gcaptcha['success'];
+
+  if ($gcaptcha_par != '') {
+    // make a GET request to the Google reCAPTCHA Server
+    $request_gcaptcha = wp_remote_get(
+      'https://www.google.com/recaptcha/api/siteverify?secret=' . $secret_key_gcaptcha . '&response=' . $gcaptcha_par . '&remoteip=' . $remote_ip
+    );
+    // get the request response body
+    $response_body_gcaptcha = wp_remote_retrieve_body( $request_gcaptcha );
+    $result_gcaptcha = json_decode( $response_body_gcaptcha, true );
+    return $result_gcaptcha['success'];
+  }
+  return false;
 }
 
 /**
@@ -418,7 +422,8 @@ function clean_login_load_before_headers() {
 				else if ( $create_customrole && !in_array($role, $newuserroles))
 					$url = esc_url( add_query_arg( 'created', 'failed', $url ) );
 				// captcha enabled
-				else if( $enable_captcha && $captcha != $captcha_session )
+				else if( ($enable_captcha && $captcha != $captcha_session)
+                || ($enable_gcaptcha && !valid_gcaptcha()))
 					$url = esc_url( add_query_arg( 'created', 'wrongcaptcha', $url ) );
 				// honeypot detection
 				else if( $website != '.' )
