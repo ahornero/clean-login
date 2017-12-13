@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Clean_Login
- * @version 1.8.2
+ * @version 1.9
  */
 /*
 Plugin Name: Clean Login
 Plugin URI: http://cleanlogin.codection.com
 Description: Responsive Frontend Login and Registration plugin. A plugin for displaying login, register, editor and restore password forms through shortcodes. [clean-login] [clean-login-edit] [clean-login-register] [clean-login-restore]
 Author: codection
-Version: 1.8.2
+Version: 1.9
 Author URI: https://codection.com
 Text Domain: clean-login
 Domain Path: /lang
@@ -224,7 +224,7 @@ function clean_login_is_password_complex($candidate) {
  * Check the captcha parameter with google server
  *
  * @return true if the gcaptcha was valid or false otherwise
- * @since 1.8.2
+ * @since 1.9
  */
 function valid_gcaptcha() {
   // gcaptcha field sent within the form
@@ -246,7 +246,7 @@ function valid_gcaptcha() {
 /**
 * Print the google api script for gcaptcha
 *
-* @since 1.8.2
+* @since 1.9
 */
 function gcaptcha_script() {
   $lang_gcaptcha_options = ['nb_NO' => 'no', 'en_US' => 'en', 'en_GB' => 'en', 'es_ES' => 'es'];
