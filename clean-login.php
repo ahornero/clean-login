@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Clean_Login
- * @version 1.9
+ * @version 1.9.2
  */
 /*
 Plugin Name: Clean Login
 Plugin URI: http://cleanlogin.codection.com
 Description: Responsive Frontend Login and Registration plugin. A plugin for displaying login, register, editor and restore password forms through shortcodes. [clean-login] [clean-login-edit] [clean-login-register] [clean-login-restore]
 Author: codection
-Version: 1.9.1
+Version: 1.9.2
 Author URI: https://codection.com
 Text Domain: clean-login
 Domain Path: /lang
@@ -253,7 +253,7 @@ function valid_gcaptcha() {
 * @since 1.9
 */
 function gcaptcha_script() {
-  $lang_gcaptcha_options = ['nb_NO' => 'no', 'en_US' => 'en', 'en_GB' => 'en', 'es_ES' => 'es'];
+  $lang_gcaptcha_options = array('nb_NO' => 'no', 'en_US' => 'en', 'en_GB' => 'en', 'es_ES' => 'es');
   $lang = '';
   if (isset($lang_gcaptcha_options[get_locale()])) {
     $lang = '?hl='.$lang_gcaptcha_options[get_locale()];
