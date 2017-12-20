@@ -1,7 +1,7 @@
 <?php
 /**
  * @package Clean_Login
- * @version 1.9.2
+ * @version 1.9.3
  */
 /*
 Plugin Name: Clean Login
