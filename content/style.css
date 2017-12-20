@@ -179,15 +179,44 @@ to your current WordPress template, and if something behaves abnormal please con
 }
 
 .cleanlogin-notification {
-	clear: both;
-	border: 1px solid;
-	border-radius: 5px;
-	font-size: 14px;
-	text-align: center;
-	padding: 18px;
-	margin-bottom: 18px;
-	-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.25);
-	box-shadow: 2px 2px 3px rgba(0,0,0,.25);
+    clear: both;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    padding: 18px;
+    margin-bottom: 18px;
+    -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.25);
+    box-shadow: 2px 2px 3px rgba(0,0,0,.25);
+    -moz-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 5s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cssAnimation {
+    to {
+                border: 0;
+                padding: 0;
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+
+@-webkit-keyframes cssAnimation {
+    to {
+                border: 0;
+                padding: 0;
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
 }
 
 .cleanlogin-notification > p {
