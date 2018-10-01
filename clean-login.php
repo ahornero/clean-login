@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Clean_Login
- * @version 1.9.3
+ * @version 1.9.4
  */
 /*
 Plugin Name: Clean Login
 Plugin URI: http://cleanlogin.codection.com
 Description: Responsive Frontend Login and Registration plugin. A plugin for displaying login, register, editor and restore password forms through shortcodes. [clean-login] [clean-login-edit] [clean-login-register] [clean-login-restore]
 Author: codection
-Version: 1.9.3
+Version: 1.9.4
 Author URI: https://codection.com
 Text Domain: clean-login
 Domain Path: /lang
@@ -279,7 +279,7 @@ function clean_login_load_before_headers() {
 
 			// LOGIN
 			if ( isset( $_REQUEST['action'] ) && $_REQUEST['action'] == 'login' ) {
-				$url = clean_login_get_translated_option_page( 'cl_login_url','');
+				//$url = clean_login_get_translated_option_page( 'cl_login_url','');
 				
 				$user = wp_signon();
 				if ( is_wp_error( $user ) )
@@ -572,7 +572,8 @@ function clean_login_load_before_headers() {
 
 					$subject = "[$blog_title] " . __( 'Restore your password', 'clean-login' );
 					add_filter( 'wp_mail_content_type', 'clean_login_set_html_content_type' );
-					if( !wp_mail( $email, $subject , $message ) )
+					$headers[] = "Content-Type: text/html; charset=UTF-8";
+					if( !wp_mail( $email, $subject , $message, $headers ) )
 						$url = esc_url( add_query_arg( 'sent', 'failed', $url ) );
 					remove_filter( 'wp_mail_content_type', 'clean_login_set_html_content_type' );
 
