@@ -112,6 +112,7 @@ function clean_login_register_show($atts) {
 	
 	$param = shortcode_atts( array(
         'role' => false,
+		'template' => 'register-form.php',
     ), $atts );
 
 	ob_start();
@@ -135,6 +136,8 @@ function clean_login_register_show($atts) {
 			echo "<div class='cleanlogin-notification error'><p>". __( 'Passwords must be identical and filled', 'clean-login' ) ."</p></div>";
 		else if ( $_GET['created'] == 'wrongmail' )
 			echo "<div class='cleanlogin-notification error'><p>". __( 'Email is not valid', 'clean-login' ) ."</p></div>";
+		else if ( $_GET['created'] == 'emailexists' )
+			echo "<div class='cleanlogin-notification error'><p>". __( 'There is already a user registered with this email. Login with this existing account. If you do not remember your password, you will find a recuperation link at the login form.', 'clean-login' ) ."</p></div>";
 		else if ( $_GET['created'] == 'wrongcaptcha' )
 			echo "<div class='cleanlogin-notification error'><p>". __( 'CAPTCHA is not valid, please try again', 'clean-login' ) ."</p></div>";
 		else if ( $_GET['created'] == 'failed' )
@@ -144,7 +147,7 @@ function clean_login_register_show($atts) {
 	}
 
 	if ( !is_user_logged_in() ) {
-		clean_login_get_template_file( 'register-form.php', $param );
+		clean_login_get_template_file( $param['template'], $param );
 	} else {
 		echo "<div class='cleanlogin-notification error'><p>". __( 'You are now logged in. It makes no sense to register a new user', 'clean-login' ) ."</p></div>";
 		clean_login_get_template_file( 'login-preview.php' );
@@ -405,8 +408,13 @@ function clean_login_load_before_headers() {
 				$website = isset( $_POST['website'] ) ? sanitize_text_field( $_POST['website'] ) : '';
 				$captcha = isset( $_POST['captcha'] ) ? sanitize_text_field( $_POST['captcha'] ) : '';
 				if( !session_id() ) session_start();
-				$captcha_session = isset( $_SESSION['cleanlogin-captcha'] ) ? $_SESSION['cleanlogin-captcha'] : '';
-				if( session_id() ) session_destroy();
+				if (!empty ($_SESSION['cleanlogin-captcha'])) {
+					$captcha_session = $_SESSION['cleanlogin-captcha'];
+					session_unregister ('cleanlogin-captcha');
+				}
+				else {
+					$captcha_session = '';
+				}
 				$role = isset( $_POST['role'] ) ? sanitize_text_field( $_POST['role'] ) : '';
 				$terms = isset( $_POST['termsconditions'] ) && $_POST['termsconditions'] == 'on' ? true : false;
 				
@@ -434,8 +442,10 @@ function clean_login_load_before_headers() {
 				// check defaults
 				else if( $username == '' || username_exists( $username ) )
 					$url = esc_url( add_query_arg( 'created', 'wronguser', $url ) );
-				else if( $email == '' || email_exists( $email ) || !is_email( $email ) )
+				else if( $email == '' || !is_email( $email ) )
 					$url = esc_url( add_query_arg( 'created', 'wrongmail', $url ) );
+				else if ( email_exists( $email ) )
+					$url = esc_url( add_query_arg( 'created', 'emailexists', $url ) );
 				else if ( $pass1 == '' || $pass1 != $pass2)
 					$url = esc_url( add_query_arg( 'created', 'wrongpass', $url ) );
 				else {
@@ -513,7 +523,9 @@ function clean_login_load_before_headers() {
 					$url = esc_url(clean_login_get_translated_option_page('cl_url_redirect'));
 					wp_signon(array('user_login' => $username, 'user_password' => $pass1), false);
 				}					
-					
+				
+				do_action ('clean_login_register', $user);
+				
 				wp_safe_redirect( $url );
 
 			// When a user click the activation link goes here to activate his/her account
