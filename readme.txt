@@ -4,7 +4,7 @@ Donate link: http://codection.com
 Tags: form, login, registration, editor, lost password, responsive, wpml, internationalization, languages, role, CAPTCHA, reCaptcha, honeypot, shortcode, wordpress, frontend
 Requires at least: 3.4
 Tested up to: 4.9
-Stable tag: 1.9.4
+Stable tag: 1.9.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -71,6 +71,11 @@ Please, refer to [Installation section](https://wordpress.org/plugins/clean-logi
 12. WPML. Certificate of Compatibility
 
 == Changelog ==
+
+= 1.9.5 =
+*   New feature: registration process now distinguish between a wrong e-mail and an e-mail that was already registered with a different account. Thanks to Martin Newman.
+*   New feature: a string template parameter is now added to the clean_login_register shortcode. Thanks to Martin Newman.
+*   Session is now not destroyed but resetting the necessary parameter. Thanks to Martin Newman.
 
 = 1.9.4 =
 *   Email notification now support HTML as claimed (Bug solved). Thanks to Adrian Toro (@adrianifero)
