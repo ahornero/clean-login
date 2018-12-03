@@ -514,6 +514,8 @@ function clean_login_load_before_headers() {
 								$url = esc_url( add_query_arg( 'sent', 'failed', $url ) );
 							remove_filter( 'wp_mail_content_type', 'clean_login_set_html_content_type' );
 						}
+
+						do_action( 'cleanlogin_after_successful_registration', $user_id );
 					}
 				}
 
