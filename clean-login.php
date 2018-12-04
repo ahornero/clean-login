@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Clean_Login
- * @version 1.9.5
+ * @version 1.9.6
  */
 /*
 Plugin Name: Clean Login
 Plugin URI: http://cleanlogin.codection.com
 Description: Responsive Frontend Login and Registration plugin. A plugin for displaying login, register, editor and restore password forms through shortcodes. [clean-login] [clean-login-edit] [clean-login-register] [clean-login-restore]
 Author: codection
-Version: 1.9.5
+Version: 1.9.6
 Author URI: https://codection.com
 Text Domain: clean-login
 Domain Path: /lang
@@ -410,7 +410,8 @@ function clean_login_load_before_headers() {
 				if( !session_id() ) session_start();
 				if (!empty ($_SESSION['cleanlogin-captcha'])) {
 					$captcha_session = $_SESSION['cleanlogin-captcha'];
-					session_unregister ('cleanlogin-captcha');
+					// session_unregister is deprecated and removed as of PHP 5.4
+					unset($_SESSION['cleanlogin-captcha']);
 				}
 				else {
 					$captcha_session = '';
