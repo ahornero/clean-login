@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Clean_Login
- * @version 1.9.7
+ * @version 1.9.8
  */
 /*
 Plugin Name: Clean Login
 Plugin URI: http://cleanlogin.codection.com
 Description: Responsive Frontend Login and Registration plugin. A plugin for displaying login, register, editor and restore password forms through shortcodes. [clean-login] [clean-login-edit] [clean-login-register] [clean-login-restore]
 Author: codection
-Version: 1.9.7
+Version: 1.9.8
 Author URI: https://codection.com
 Text Domain: clean-login
 Domain Path: /lang
