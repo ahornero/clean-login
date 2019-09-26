@@ -3,8 +3,8 @@ Contributors: hornero, carazo
 Donate link: http://codection.com
 Tags: form, login, registration, editor, lost password, responsive, wpml, internationalization, languages, role, CAPTCHA, reCaptcha, honeypot, shortcode, wordpress, frontend
 Requires at least: 3.4
-Tested up to: 5.0
-Stable tag: 1.9.8
+Tested up to: 5.2
+Stable tag: 1.9.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -71,6 +71,14 @@ Please, refer to [Installation section](https://wordpress.org/plugins/clean-logi
 12. WPML. Certificate of Compatibility
 
 == Changelog ==
+
+= 1.9.10 =
+*   Email Notification HTML Tags bug solved. Thanks to unCommons (@uncommons)
+*	Tested on WordPress 5.2.2
+
+= 1.9.9 =
+*   login_redirect filter included, and MemberPress compatibility ensured.
+*	Tested on WordPress 5.1.1
 
 = 1.9.8 =
 *   Czech language added. Thanks to Zbyněk Gilar
@@ -333,10 +341,6 @@ Please, refer to [Installation section](https://wordpress.org/plugins/clean-logi
 
 = 1.0 =
 *   First installation
-
-== Demo site ==
-
-[cleanlogin.codection.com](http://cleanlogin.codection.com/)
 
 == Frequently Asked Questions ==
 
